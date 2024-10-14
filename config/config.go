@@ -8,6 +8,7 @@ type Config struct {
 	DB_PASSWORD string
 	DB_URL      string
 	DB_DATABASE string
+	JWT_KEY     string
 }
 
 var ENV *Config
