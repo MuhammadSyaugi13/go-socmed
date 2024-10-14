@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"go-socmed/config"
+	"go-socmed/router"
 
 	"github.com/gin-gonic/gin"
 )
@@ -21,5 +22,8 @@ func main() {
 			"message": "pong",
 		})
 	})
+
+	router.AuthRouter(api)
+
 	r.Run(fmt.Sprintf("localhost:%v", config.ENV.PORT)) // listen and serve on 0.0.0.0:8080
 }
