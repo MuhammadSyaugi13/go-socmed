@@ -24,6 +24,7 @@ func main() {
 	})
 
 	router.AuthRouter(api)
+	router.PostRouter(api)
 
 	r.Run(fmt.Sprintf("localhost:%v", config.ENV.PORT)) // listen and serve on 0.0.0.0:8080
 }
